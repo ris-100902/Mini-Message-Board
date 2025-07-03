@@ -1,0 +1,13 @@
+<html>
+    <title><%= title %></title>
+    <body>
+        <ul>
+            <% for (let i=0;i<message.length;i++) { %>
+                <li>
+                    <% let url = "/" + message[i].id; console.log(url);%>
+                    <p><%= message[i].text %> <a href="/messages/<%= message[i].id %>"><button>Open</button></a> </p>
+                </li>
+            <% }; %>
+        </ul>
+    </body>
+</html>
