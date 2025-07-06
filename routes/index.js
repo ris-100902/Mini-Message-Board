@@ -33,7 +33,7 @@ router.get('/messages/:messageId',(req,res) => {
 router.post('/new', (req,res) => {
     console.log("Message sent");
     const newMessage = {
-        id : messages.length + 1,
+        id : (messages.length + 1).toString(),
         text : req.body.msg,
         user : req.body.user,
         added : new Date()
